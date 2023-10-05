@@ -1,0 +1,17 @@
+name: semific
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - pandas
+  - tqdm
+  - omegaconf
+  - opencv
+  - pyyaml
+  - hydra-core
+  - pillow
+  - numpy
+  - exifread
+  - dacite
+  - hydra-core
+  # Additional dependencies based on the wider project needs can be added here

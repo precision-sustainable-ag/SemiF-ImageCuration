@@ -1,0 +1,56 @@
+dataset: cutouts # "images" or "cutouts"
+
+species: # USDA symbol from list of species  
+  - AMPA    # Palmer amaranth
+  # - AMAR2   # Common ragweed
+  # - SEOB4   # Sicklepod
+  # - XAST    # Cocklebur
+  # - DISA    # Large crabgrass
+  # - ELIN3   # Goosegrass
+  # - URPL2   # Broadleaf signalgrass
+  # - CYRO    # Purple nutsedge
+  # - AMTU    # Waterhemp
+  # - ECCR    # Barnyardgrass
+  # - ECCO2   # Jungle rice
+  # - URTE2   # Texas millet
+  # - BASC5   # Kochia
+  # - HEAN3   # Common sunflower
+  # - PAHY    # Ragweed parthenium
+  # - SOHA    # Johnsongrass
+  # - GLMA4   # Soybean
+  # - AMHY    # Smooth pigweed
+  # - CHAL7   # Common lambsquarters
+  # - PADI    # Fall panicum
+  # - DAST    # Jimson weed
+  # - ABTH    # Velvetleaf
+  # - SEPU8   # Yellow foxtail
+  # - SEFA    # Giant foxtail
+  # - ERCA20    # Horseweed
+  # - ZEA   # Maize
+  # - VIVI    # Hairy vetch
+  # - PISA6   # Winter pea
+  # - TRIN3   # Crimson clover
+  # - TRPR2   # Red clover
+  # - BRASS2    # Mustards
+  # - RASA2   # cultivated radish
+  # - SECE    # Cereal rye
+  # - TRITI2    # Triticale
+  # - TRAE    # Winter wheat
+  # - AVSA    # Oats
+  # - HORDE   # Barley
+  # - AVST2   # Black oats
+  #  - GOHI   # Upland cotton
+
+
+is_primary: True # must use None if none
+extends_border: None # must use None if none
+
+green_sum:
+  max: 1000000000
+  min: 10000000
+
+area: # mean, 25, 50, 75 for choosing greater than 25%, 50% , 75% percentiles
+  max: 
+  min: 25
+
+save_csv: True # to create and save a csv of all cutout metadata

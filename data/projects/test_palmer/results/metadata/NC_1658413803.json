@@ -1,0 +1,714 @@
+{
+    "blob_home": "data",
+    "data_root": "semifield-developed-images",
+    "batch_id": "NC_2022-07-21",
+    "image_id": "NC_1658413803",
+    "image_path": "images/NC_1658413803.jpg",
+    "plant_date": "2022-06-09",
+    "dap": 42,
+    "width": 9560,
+    "height": 6368,
+    "exif_meta": {
+        "ImageWidth": 9560,
+        "ImageLength": 6368,
+        "BitsPerSample": 8,
+        "Compression": 1,
+        "PhotometricInterpretation": 2,
+        "Make": "SONY",
+        "Model": "ILCE-7RM4",
+        "Orientation": 1,
+        "SamplesPerPixel": 3,
+        "XResolution": "300",
+        "YResolution": "300",
+        "PlanarConfiguration": 1,
+        "ResolutionUnit": 2,
+        "Software": "RawTherapee 5.8",
+        "DateTime": "2022:07:21 10:28:45",
+        "Rating": 0,
+        "ExifOffset": 4449,
+        "ExposureTime": "1/200",
+        "FNumber": "10",
+        "ExposureProgram": 1,
+        "ISOSpeedRatings": 100,
+        "RecommendedExposureIndex": 100,
+        "ExifVersion": [
+            48,
+            50,
+            51,
+            49
+        ],
+        "DateTimeOriginal": "2022:07:21 10:28:45",
+        "DateTimeDigitized": "2022:07:21 10:28:45",
+        "BrightnessValue": "4301/640",
+        "ExposureBiasValue": "0",
+        "MaxApertureValue": "217/128",
+        "MeteringMode": 5,
+        "LightSource": 0,
+        "Flash": 16,
+        "FocalLength": "55",
+        "FileSource": 3,
+        "SceneType": 1,
+        "CustomRendered": 0,
+        "ExposureMode": 1,
+        "WhiteBalance": 0,
+        "DigitalZoomRatio": "1",
+        "FocalLengthIn35mmFilm": 55,
+        "SceneCaptureType": 0,
+        "Contrast": 0,
+        "Saturation": 0,
+        "Sharpness": 0,
+        "LensSpecification": [
+            "55",
+            "55",
+            "9/5",
+            "9/5"
+        ],
+        "LensModel": "FE 55mm F1.8 ZA",
+        "BodySerialNumber": null,
+        "MakerNote": null,
+        "ImageDescription": "                               ",
+        "UserComment": null,
+        "ApplicationNotes": null,
+        "Tag": null,
+        "SubIFDs": 4450
+    },
+    "camera_info": {
+        "camera_location": [
+            0.3351038409480757,
+            9.883885669763131,
+            2.6221723013587668
+        ],
+        "pixel_width": 0.0075333198937023,
+        "pixel_height": 0.0075333198937023,
+        "yaw": 183.7872836041677,
+        "pitch": -17.417820128972288,
+        "roll": -10.730668070634188,
+        "focal_length": 8835.080832456395,
+        "fov": {
+            "top_left": [
+                -0.403886733736061,
+                10.308492052536302
+            ],
+            "top_right": [
+                1.0116760134491278,
+                10.40219807088905
+            ],
+            "bottom_left": [
+                -0.3414683315529763,
+                9.365573268637212
+            ],
+            "bottom_right": [
+                1.0740944156322123,
+                9.45927928698996
+            ],
+            "is_scaleable": true
+        }
+    },
+    "cutout_ids": [
+        "NC_1658413803_0",
+        "NC_1658413803_1",
+        "NC_1658413803_2",
+        "NC_1658413803_3",
+        "NC_1658413803_4",
+        "NC_1658413803_5",
+        "NC_1658413803_6"
+    ],
+    "bboxes": [
+        {
+            "bbox_id": "NC_1658413803_0",
+            "image_id": "NC_1658413803",
+            "local_centroid": [
+                0.8452406,
+                0.49081345
+            ],
+            "local_coordinates": {
+                "top_left": [
+                    0.6922594,
+                    0.1981784
+                ],
+                "top_right": [
+                    0.9982218,
+                    0.1981784
+                ],
+                "bottom_left": [
+                    0.6922594,
+                    0.7834485
+                ],
+                "bottom_right": [
+                    0.9982218,
+                    0.7834485
+                ],
+                "is_scaleable": true
+            },
+            "global_centroid": [
+                -0.048181814828044525,
+                10.415028256243122
+            ],
+            "global_coordinates": {
+                "top_left": [
+                    -1.0419597619372452,
+                    10.549368960018214
+                ],
+                "top_right": [
+                    -0.04678315398265885,
+                    10.273775318337544
+                ],
+                "bottom_left": [
+                    -0.048181814828044525,
+                    10.28068755246803
+                ],
+                "bottom_right": [
+                    -0.048181814828044525,
+                    10.28068755246803
+                ],
+                "is_scaleable": true
+            },
+            "cls": {
+                "class_id": 1,
+                "USDA_symbol": "AMPA",
+                "EPPO": "AMAPA",
+                "group": "dicot",
+                "class": "Magnoliopsida",
+                "subclass": "Caryophyllidae",
+                "order": "Caryophyllales",
+                "family": "Amaranthaceae",
+                "genus": "Amaranthus",
+                "species": "palmeri",
+                "common_name": "Palmer amaranth",
+                "authority": "Watson",
+                "growth_habit": "forb/herb",
+                "duration": "annual",
+                "collection_location": "NC",
+                "category": "warm season weed",
+                "collection_timing": "summer",
+                "link": "https://plants.usda.gov/home/plantProfile?symbol=AMPA",
+                "note": null,
+                "hex": "#1d686e",
+                "rgb": [
+                    29,
+                    104,
+                    110
+                ]
+            },
+            "is_primary": false,
+            "instance_id": [
+                247.28207680233461,
+                127.60455147385203,
+                203.5191169957885
+            ],
+            "overlapping_bbox_ids": [
+                "NC_1658413831_3",
+                "NC_1658413854_4",
+                "NC_1658413844_6"
+            ]
+        },
+        {
+            "bbox_id": "NC_1658413803_1",
+            "image_id": "NC_1658413803",
+            "local_centroid": [
+                0.1165272,
+                0.63544285
+            ],
+            "local_coordinates": {
+                "top_left": [
+                    0.0,
+                    0.2708857
+                ],
+                "top_right": [
+                    0.2330544,
+                    0.2708857
+                ],
+                "bottom_left": [
+                    0.0,
+                    1.0
+                ],
+                "bottom_right": [
+                    0.2330544,
+                    1.0
+                ],
+                "is_scaleable": true
+            },
+            "global_centroid": [
+                0.404589850869509,
+                10.52341374081274
+            ],
+            "global_coordinates": {
+                "top_left": [
+                    0.5101271176504082,
+                    10.384472205839781
+                ],
+                "top_right": [
+                    0.12145977357960959,
+                    10.393684147083258
+                ],
+                "bottom_left": [
+                    0.8573615165670625,
+                    10.6623552757857
+                ],
+                "bottom_right": [
+                    -0.048181814828044525,
+                    10.28068755246803
+                ],
+                "is_scaleable": true
+            },
+            "cls": {
+                "class_id": 1,
+                "USDA_symbol": "AMPA",
+                "EPPO": "AMAPA",
+                "group": "dicot",
+                "class": "Magnoliopsida",
+                "subclass": "Caryophyllidae",
+                "order": "Caryophyllales",
+                "family": "Amaranthaceae",
+                "genus": "Amaranthus",
+                "species": "palmeri",
+                "common_name": "Palmer amaranth",
+                "authority": "Watson",
+                "growth_habit": "forb/herb",
+                "duration": "annual",
+                "collection_location": "NC",
+                "category": "warm season weed",
+                "collection_timing": "summer",
+                "link": "https://plants.usda.gov/home/plantProfile?symbol=AMPA",
+                "note": null,
+                "hex": "#1d686e",
+                "rgb": [
+                    29,
+                    104,
+                    110
+                ]
+            },
+            "is_primary": false,
+            "instance_id": [
+                135,
+                231,
+                106
+            ],
+            "overlapping_bbox_ids": []
+        },
+        {
+            "bbox_id": "NC_1658413803_2",
+            "image_id": "NC_1658413803",
+            "local_centroid": [
+                0.83927825,
+                0.8716237499999999
+            ],
+            "local_coordinates": {
+                "top_left": [
+                    0.6785565,
+                    0.7432475
+                ],
+                "top_right": [
+                    1.0,
+                    0.7432475
+                ],
+                "bottom_left": [
+                    0.6785565,
+                    1.0
+                ],
+                "bottom_right": [
+                    1.0,
+                    1.0
+                ],
+                "is_scaleable": true
+            },
+            "global_centroid": [
+                0.3787633398235189,
+                9.904934503924936
+            ],
+            "global_coordinates": {
+                "top_left": [
+                    -0.048181814828044525,
+                    10.28068755246803
+                ],
+                "top_right": [
+                    -0.048181814828044525,
+                    10.28068755246803
+                ],
+                "bottom_left": [
+                    0.8057084944750823,
+                    9.529181455381842
+                ],
+                "bottom_right": [
+                    -0.048181814828044525,
+                    10.28068755246803
+                ],
+                "is_scaleable": true
+            },
+            "cls": {
+                "class_id": 1,
+                "USDA_symbol": "AMPA",
+                "EPPO": "AMAPA",
+                "group": "dicot",
+                "class": "Magnoliopsida",
+                "subclass": "Caryophyllidae",
+                "order": "Caryophyllales",
+                "family": "Amaranthaceae",
+                "genus": "Amaranthus",
+                "species": "palmeri",
+                "common_name": "Palmer amaranth",
+                "authority": "Watson",
+                "growth_habit": "forb/herb",
+                "duration": "annual",
+                "collection_location": "NC",
+                "category": "warm season weed",
+                "collection_timing": "summer",
+                "link": "https://plants.usda.gov/home/plantProfile?symbol=AMPA",
+                "note": null,
+                "hex": "#1d686e",
+                "rgb": [
+                    29,
+                    104,
+                    110
+                ]
+            },
+            "is_primary": false,
+            "instance_id": [
+                132,
+                164,
+                253
+            ],
+            "overlapping_bbox_ids": []
+        },
+        {
+            "bbox_id": "NC_1658413803_3",
+            "image_id": "NC_1658413803",
+            "local_centroid": [
+                0.4830021,
+                0.6074906
+            ],
+            "local_coordinates": {
+                "top_left": [
+                    0.2055439,
+                    0.2156093
+                ],
+                "top_right": [
+                    0.7604603,
+                    0.2156093
+                ],
+                "bottom_left": [
+                    0.2055439,
+                    0.9993719
+                ],
+                "bottom_right": [
+                    0.7604603,
+                    0.9993719
+                ],
+                "is_scaleable": true
+            },
+            "global_centroid": [
+                -0.048181814828044525,
+                10.291259653645755
+            ],
+            "global_coordinates": {
+                "top_left": [
+                    0.16562213584376254,
+                    10.301831754823478
+                ],
+                "top_right": [
+                    -0.04678315398265885,
+                    10.273775318337544
+                ],
+                "bottom_left": [
+                    -0.048181814828044525,
+                    10.28068755246803
+                ],
+                "bottom_right": [
+                    -0.048181814828044525,
+                    10.28068755246803
+                ],
+                "is_scaleable": true
+            },
+            "cls": {
+                "class_id": 1,
+                "USDA_symbol": "AMPA",
+                "EPPO": "AMAPA",
+                "group": "dicot",
+                "class": "Magnoliopsida",
+                "subclass": "Caryophyllidae",
+                "order": "Caryophyllales",
+                "family": "Amaranthaceae",
+                "genus": "Amaranthus",
+                "species": "palmeri",
+                "common_name": "Palmer amaranth",
+                "authority": "Watson",
+                "growth_habit": "forb/herb",
+                "duration": "annual",
+                "collection_location": "NC",
+                "category": "warm season weed",
+                "collection_timing": "summer",
+                "link": "https://plants.usda.gov/home/plantProfile?symbol=AMPA",
+                "note": null,
+                "hex": "#1d686e",
+                "rgb": [
+                    29,
+                    104,
+                    110
+                ]
+            },
+            "is_primary": true,
+            "instance_id": [
+                186,
+                243,
+                222
+            ],
+            "overlapping_bbox_ids": []
+        },
+        {
+            "bbox_id": "NC_1658413803_4",
+            "image_id": "NC_1658413803",
+            "local_centroid": [
+                0.0714958,
+                0.1458857
+            ],
+            "local_coordinates": {
+                "top_left": [
+                    0.0,
+                    0.0
+                ],
+                "top_right": [
+                    0.1429916,
+                    0.0
+                ],
+                "bottom_left": [
+                    0.0,
+                    0.2917714
+                ],
+                "bottom_right": [
+                    0.1429916,
+                    0.2917714
+                ],
+                "is_scaleable": true
+            },
+            "global_centroid": [
+                0.3777747941187994,
+                10.26240706268095
+            ],
+            "global_coordinates": {
+                "top_left": [
+                    0.5050496560916514,
+                    10.114052479390404
+                ],
+                "top_right": [
+                    0.21963127809677763,
+                    10.134854878435807
+                ],
+                "bottom_left": [
+                    0.5180258837871304,
+                    10.410761645971494
+                ],
+                "bottom_right": [
+                    0.2375237044504683,
+                    10.66906542471401
+                ],
+                "is_scaleable": true
+            },
+            "cls": {
+                "class_id": 1,
+                "USDA_symbol": "AMPA",
+                "EPPO": "AMAPA",
+                "group": "dicot",
+                "class": "Magnoliopsida",
+                "subclass": "Caryophyllidae",
+                "order": "Caryophyllales",
+                "family": "Amaranthaceae",
+                "genus": "Amaranthus",
+                "species": "palmeri",
+                "common_name": "Palmer amaranth",
+                "authority": "Watson",
+                "growth_habit": "forb/herb",
+                "duration": "annual",
+                "collection_location": "NC",
+                "category": "warm season weed",
+                "collection_timing": "summer",
+                "link": "https://plants.usda.gov/home/plantProfile?symbol=AMPA",
+                "note": null,
+                "hex": "#1d686e",
+                "rgb": [
+                    29,
+                    104,
+                    110
+                ]
+            },
+            "is_primary": false,
+            "instance_id": [
+                108,
+                121,
+                144
+            ],
+            "overlapping_bbox_ids": []
+        },
+        {
+            "bbox_id": "NC_1658413803_5",
+            "image_id": "NC_1658413803",
+            "local_centroid": [
+                0.8149058499999999,
+                0.09092335
+            ],
+            "local_coordinates": {
+                "top_left": [
+                    0.632636,
+                    0.0
+                ],
+                "top_right": [
+                    0.9971757,
+                    0.0
+                ],
+                "bottom_left": [
+                    0.632636,
+                    0.1818467
+                ],
+                "bottom_right": [
+                    0.9971757,
+                    0.1818467
+                ],
+                "is_scaleable": true
+            },
+            "global_centroid": [
+                -0.5227012694554817,
+                10.34513730108722
+            ],
+            "global_coordinates": {
+                "top_left": [
+                    -1.007480494572888,
+                    10.19821250609607
+                ],
+                "top_right": [
+                    -0.04678315398265885,
+                    10.273775318337544
+                ],
+                "bottom_left": [
+                    -0.9986193849283045,
+                    10.492062096078373
+                ],
+                "bottom_right": [
+                    -0.04678315398265885,
+                    10.273775318337544
+                ],
+                "is_scaleable": true
+            },
+            "cls": {
+                "class_id": 1,
+                "USDA_symbol": "AMPA",
+                "EPPO": "AMAPA",
+                "group": "dicot",
+                "class": "Magnoliopsida",
+                "subclass": "Caryophyllidae",
+                "order": "Caryophyllales",
+                "family": "Amaranthaceae",
+                "genus": "Amaranthus",
+                "species": "palmeri",
+                "common_name": "Palmer amaranth",
+                "authority": "Watson",
+                "growth_habit": "forb/herb",
+                "duration": "annual",
+                "collection_location": "NC",
+                "category": "warm season weed",
+                "collection_timing": "summer",
+                "link": "https://plants.usda.gov/home/plantProfile?symbol=AMPA",
+                "note": null,
+                "hex": "#1d686e",
+                "rgb": [
+                    29,
+                    104,
+                    110
+                ]
+            },
+            "is_primary": false,
+            "instance_id": [
+                254,
+                195,
+                106
+            ],
+            "overlapping_bbox_ids": []
+        },
+        {
+            "bbox_id": "NC_1658413803_6",
+            "image_id": "NC_1658413803",
+            "local_centroid": [
+                0.5377092,
+                0.618169
+            ],
+            "local_coordinates": {
+                "top_left": [
+                    0.4302301,
+                    0.4400126
+                ],
+                "top_right": [
+                    0.6451883,
+                    0.4400126
+                ],
+                "bottom_left": [
+                    0.4302301,
+                    0.7963254
+                ],
+                "bottom_right": [
+                    0.6451883,
+                    0.7963254
+                ],
+                "is_scaleable": true
+            },
+            "global_centroid": [
+                -0.21690472394745453,
+                10.636894282232284
+            ],
+            "global_coordinates": {
+                "top_left": [
+                    -0.2859885957133025,
+                    10.673952191720739
+                ],
+                "top_right": [
+                    -1.034321502290128,
+                    10.8440270371431
+                ],
+                "bottom_left": [
+                    -0.21199775236140916,
+                    10.599836372743827
+                ],
+                "bottom_right": [
+                    -0.22181169553349991,
+                    10.594392221824297
+                ],
+                "is_scaleable": true
+            },
+            "cls": {
+                "class_id": 1,
+                "USDA_symbol": "AMPA",
+                "EPPO": "AMAPA",
+                "group": "dicot",
+                "class": "Magnoliopsida",
+                "subclass": "Caryophyllidae",
+                "order": "Caryophyllales",
+                "family": "Amaranthaceae",
+                "genus": "Amaranthus",
+                "species": "palmeri",
+                "common_name": "Palmer amaranth",
+                "authority": "Watson",
+                "growth_habit": "forb/herb",
+                "duration": "annual",
+                "collection_location": "NC",
+                "category": "warm season weed",
+                "collection_timing": "summer",
+                "link": "https://plants.usda.gov/home/plantProfile?symbol=AMPA",
+                "note": null,
+                "hex": "#1d686e",
+                "rgb": [
+                    29,
+                    104,
+                    110
+                ]
+            },
+            "is_primary": true,
+            "instance_id": [
+                194,
+                112,
+                108
+            ],
+            "overlapping_bbox_ids": []
+        }
+    ],
+    "fullres_height": 6368,
+    "fullres_width": 9560,
+    "rel_path": "SemiF-AnnotationPipeline/data/semifield-developed-images/NC_2022-07-21/images",
+    "schema_version": "1.0"
+}
