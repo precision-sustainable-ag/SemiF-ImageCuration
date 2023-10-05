@@ -40,6 +40,18 @@ data:
   remapped_masks: ${general.resultsdir}/remapped_masks
   datacsv: ${general.projectdir}/${general.project_name}.csv
 
+# ================== Classes and Metadata ====================== #
+
+classes:
+  present_class_info: ${general.resultsdir}/present_classes.csv
+  all_class_info: ${general.resultsdir}/all_classes.csv
+  true_mask_palette: ${general.resultsdir}/true_mask_palette.csv
+  common_name_file: ${general.resultsdir}/common_names.csv
+  USDA_symbols_file: ${general.resultsdir}/USDA_symbols.csv
+  speciesinfo_json: /home/psa_images/SemiF-AnnotationPipeline/data/semifield-utils/species_information/species_info.json
+  coco_categories: ${general.projectdir}/coco_categories.json
+
+### Nothing below this line is implemented
 # ==================== Image Processing ======================== #
 
 mask2yolo:
@@ -54,16 +66,6 @@ crop_split:
   N: 640
   exclude_empty_tiles: True
 
-# ================== Classes and Metadata ====================== #
-
-classes:
-  present_class_info: ${general.resultsdir}/present_classes.csv
-  all_class_info: ${general.resultsdir}/all_classes.csv
-  true_mask_palette: ${general.resultsdir}/true_mask_palette.csv
-  common_name_file: ${general.resultsdir}/common_names.csv
-  USDA_symbols_file: ${general.resultsdir}/USDA_symbols.csv
-  speciesinfo_json: /home/psa_images/SemiF-AnnotationPipeline/data/semifield-utils/species_information/species_info.json
-  coco_categories: ${general.projectdir}/coco_categories.json
 
 # ==================== Data Splitting ========================== #
 
