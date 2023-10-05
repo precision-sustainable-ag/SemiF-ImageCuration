@@ -4,7 +4,6 @@
 
 SemiF-ImageCuration is a tool designed for curating a subset of images from the National Agricultural Image Repository. It automates the process of selecting, filtering, and organizing large sets of plant images collected under semi-field nursery conditions, and is configured using Facebook's Hydra configuration tool.
 
-l research projects.
 
 ## Installation
 
