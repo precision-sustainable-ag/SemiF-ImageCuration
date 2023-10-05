@@ -36,7 +36,7 @@ To execute a task, run the main script from the command line and specify the des
 python CURATEDATA.py general.task=config_data general.project_name=test_palmer
 ```
 
-Replace config_data with create_dataset to execute the second task and my_project with your actual project name.
+Replace config_data with create_dataset to execute the second task and test_palmer with your actual project name.
 
 ## Directory Structure
 
