@@ -1,7 +1,0 @@
-[2023-10-05 16:56:44,083][__main__][INFO] - Starting task config_data
-[2023-10-05 16:58:11,166][utils.config_data_utils][INFO] - 16163 cutouts after filter by species (['AMPA'])
-[2023-10-05 16:58:11,361][utils.config_data_utils][INFO] - 3 cutouts after filter by green_sum ({'max': 1000000000, 'min': 10000000})
-[2023-10-05 16:58:11,383][utils.config_data_utils][INFO] - 2 cutouts after filter by area ({'max': None, 'min': 25})
-[2023-10-05 16:58:11,384][utils.config_data_utils][INFO] - 2 cutouts after filter by is_primary (True)
-[2023-10-05 16:58:11,384][utils.config_data_utils][INFO] - 2 Images after removing duplicates
-[2023-10-05 16:59:10,019][__main__][INFO] - Starting task create_dataset
