@@ -51,21 +51,21 @@ classes:
   speciesinfo_json: /home/psa_images/SemiF-AnnotationPipeline/data/semifield-utils/species_information/species_info.json
   coco_categories: ${general.projectdir}/coco_categories.json
 
-### Nothing below this line is implemented
+
 # ==================== Image Processing ======================== #
 
+crop_split: #for both images and cutouts
+  M: 640
+  N: 640
+  exclude_empty_tiles: True
+
+### Nothing below this line is implemented
 mask2yolo:
   cutouts_or_imgs: cutouts
   testing:
     test: False
     sample: 10
     write_samples: True
-
-crop_split:
-  M: 640
-  N: 640
-  exclude_empty_tiles: True
-
 
 # ==================== Data Splitting ========================== #
 
