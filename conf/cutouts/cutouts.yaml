@@ -1,5 +1,3 @@
-dataset: cutouts # "images" or "cutouts"
-
 species: # USDA symbol from list of species  
   - AMPA    # Palmer amaranth
   # - AMAR2   # Common ragweed

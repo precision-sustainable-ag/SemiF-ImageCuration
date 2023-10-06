@@ -56,7 +56,6 @@ class ConfigData:
         self.species = cfg.cutouts.species
 
         # Main filters
-        self.dataset_type = cfg.cutouts.dataset
         self.green_sum = cfg.cutouts.green_sum
         self.area = cfg.cutouts.area
         self.extends_border = cfg.cutouts.extends_border

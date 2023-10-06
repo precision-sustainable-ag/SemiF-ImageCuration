@@ -89,10 +89,6 @@ Decide whether to generate and save a CSV file of all cutout metadata.
 save_csv: True 
 ```
 
-#### Dataset Type
-
-Specify whether to target "images" or "cutouts" for the dataset creation.
-
 ### Configuring Image and Cutout Cropping
 
 For the crop_images task, use the crop_split section of the configuration file to define the specifics of how images and cutouts are cropped:
