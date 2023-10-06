@@ -1,3 +1,4 @@
+import os
 import random
 import shutil
 from concurrent.futures import ProcessPoolExecutor, as_completed
@@ -174,8 +175,8 @@ def main(cfg: DictConfig):
     mask_dir, output_dir = get_inputmask_and_outpout_dirs(cfg)
 
     mask_images = list(mask_dir.glob("*.png"))
-
-    with ProcessPoolExecutor() as executor:
+    available_cpus = int(len(os.sched_getaffinity(0)) / cfg.general.cpu_denominator)
+    with ProcessPoolExecutor(available_cpus) as executor:
         # Convert all mask images
         futures = [
             executor.submit(process_image, img_path, output_dir)
