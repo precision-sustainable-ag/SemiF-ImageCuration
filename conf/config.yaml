@@ -61,7 +61,7 @@ crop_split: #for both images and cutouts
 
 ### Nothing below this line is implemented
 mask2yolo:
-  cutouts_or_imgs: cutouts
+  cutouts_or_imgs: cropped images
   testing:
     test: False
     sample: 10
