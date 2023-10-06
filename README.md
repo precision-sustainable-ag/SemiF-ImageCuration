@@ -73,7 +73,7 @@ green_sum:
 
 ### Image Area Filtering
 
-Filter images based on their area by setting values for the minimum and maximum. You can must use either mean, 25, 50, or 75 to represent percentiles.
+Filter images based on their area by setting values for the minimum and maximum. You must use either mean, 25, 50, or 75 to represent percentiles.
 
 ```yaml
 area: 
