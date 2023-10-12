@@ -1,3 +1,5 @@
+# Shell scripts
+*.sh
 # Data
 data
 # Pycache

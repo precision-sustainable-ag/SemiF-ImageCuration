@@ -1,6 +1,6 @@
 import logging
 import os
-from concurrent.futures import ProcessPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from shutil import copy2
 
@@ -25,23 +25,49 @@ class BaseDataset:
         """Copy a single file."""
         copy2(src_path, dest_dir)
 
+
+class BaseDatasetOptimized(BaseDataset):
     def copy_files(self, src_list, destination_dir):
-        available_cpus = int(len(os.sched_getaffinity(0)) / self.cpu_denominator)
-        with ProcessPoolExecutor(available_cpus) as executor:
-            # Create a list of futures
-            futures = [
-                executor.submit(self.copy_file, path, destination_dir)
-                for path in src_list
+        # Check if multithreading is enabled in the configuration
+        use_multithreading = getattr(
+            self, "use_multithreading", True
+        )  # Default to True if not set
+        use_multithreading = False
+
+        if use_multithreading:
+            available_cpus = int(len(os.sched_getaffinity(0)) / self.cpu_denominator)
+
+            # Chunk the src_list
+            chunk_size = len(src_list) // available_cpus
+            src_chunks = [
+                src_list[i : i + chunk_size]
+                for i in range(0, len(src_list), chunk_size)
             ]
 
-            # Use tqdm to display progress
-            for _ in tqdm(
-                as_completed(futures), total=len(src_list), desc="Copying files"
-            ):
-                pass
+            with ThreadPoolExecutor(available_cpus) as executor:
+                # Create a list of futures
+                futures = [
+                    executor.submit(self._copy_chunk, chunk, destination_dir)
+                    for chunk in src_chunks
+                ]
+
+                # Use tqdm to display progress
+                for _ in tqdm(
+                    as_completed(futures), total=len(src_chunks), desc="Copying files"
+                ):
+                    pass
+        else:
+            # Standard sequential copy
+            for src in tqdm(src_list, desc="Copying files"):
+                self.copy_file(src, destination_dir)
+
+    @staticmethod
+    def _copy_chunk(src_chunk, dest_dir):
+        for src in src_chunk:
+            copy2(src, dest_dir)
 
 
-class CreateCutoutDataset(BaseDataset):
+class CreateCutoutDataset(BaseDatasetOptimized):
     """
     Dataset class specifically for handling cutout datasets.
     """
@@ -70,7 +96,7 @@ class CreateCutoutDataset(BaseDataset):
         )
 
 
-class CreateDataset(BaseDataset):
+class CreateDataset(BaseDatasetOptimized):
     """
     Dataset class for handling full resolution datasets.
     """
