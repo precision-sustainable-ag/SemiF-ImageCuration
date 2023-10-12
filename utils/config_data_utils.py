@@ -62,6 +62,8 @@ class ConfigData:
         self.is_primary = cfg.cutouts.is_primary
         self.common_name_distribution = cfg.data.common_name_distribution
         self.batch_distribution = cfg.data.batch_distribution
+        self.uniform_subsample = cfg.cutouts.uniform_subsample
+        self.subsample_by_species = cfg.cutouts.subsample_by_species
 
         self.df = self.sort_cutouts()
 
@@ -130,12 +132,125 @@ class ConfigData:
             )
         return df
 
+    def create_subsample_by_species(self, df):
+        """
+        Creates a subsample of the data based on the number of images specified for each class in the configuration.
+
+        Returns:
+        --------
+        subsampled_df : DataFrame
+            A dataframe containing the subsample of images.
+        """
+        assert not (
+            self.uniform_subsample.status and self.subsample_by_species.status
+        ), "Either specify 'uniform_subsample' or 'subsample_by_species', but not both."
+
+        if not self.subsample_by_species.status:
+            return df
+
+        species_counts = self.subsample_by_species.species_counts
+
+        # Create an empty dataframe to collect subsamples
+        subsampled_dfs = []
+        replace = self.subsample_by_species.replace
+        for usda_symbol, count in species_counts.items():
+            if usda_symbol not in df["USDA_symbol"].unique():
+                log.warning(
+                    f"Species USDA_symbol {usda_symbol} not found in configured df. Check cutouts.species in config. Skipping."
+                )
+                continue
+            # Filter rows corresponding to the current common name
+            filtered = df[df["USDA_symbol"] == usda_symbol]
+            # If counts is specified and larger than the available data without replacement, adjust it
+            if count is float and count <= 1:
+                frac = count
+                count = None
+            else:
+                frac = None
+                if count and not replace and len(filtered) < count:
+                    log.warning(
+                        f"Sample size 'counts'({count}) smaller than population size {len(filtered)} for {usda_symbol}. Using population size as counts."
+                    )
+                    count = len(filtered)
+            # Sample the required number of rows for the current common name
+            subsample = filtered.sample(
+                n=min(count, len(filtered)),
+                frac=frac,
+                random_state=self.subsample_by_species.random_state,
+                replace=False,
+            )
+
+            # Append the subsample to the collection dataframe
+            subsampled_dfs.append(subsample)
+
+        subsampled_df = pd.concat(subsampled_dfs)
+        log.info(f"Subsampled by species dataframe has {len(subsampled_df)} rows.")
+
+        return subsampled_df
+
+    def create_uniform_subsample(self, df):
+        """
+        Creates a subsample of the data based on the number of n_counts images specified in the configuration.
+
+        Returns:
+        --------
+        subsampled_df : DataFrame
+            A dataframe containing the subsample of images.
+        """
+        assert not (
+            self.uniform_subsample.status and self.subsample_by_species.status
+        ), "Either specify 'uniform_subsample' or 'subsample_by_species', but not both."
+
+        if not self.uniform_subsample.status:
+            return df
+
+        common_names = df.common_name.unique()
+        # Create an empty dataframe to collect subsamples
+        subsampled_dfs = []
+
+        n_counts = self.uniform_subsample.n_counts
+        for common_name in common_names:
+            # Filter rows corresponding to the current common name
+            filtered = df[df["common_name"] == common_name]
+
+            # Configure N and replace for sampling
+            replace = self.uniform_subsample.replace
+            if n_counts:
+                if not replace and len(filtered) < n_counts:
+                    log.warning(
+                        f"Sample size 'n_counts'({n_counts}) smaller than population size {len(filtered)} for {common_name}. Using population size as n_counts."
+                    )
+                    n_counts = len(filtered)
+
+            frac = self.uniform_subsample.frac if n_counts is None else None
+
+            # Sample the required number of rows for the current common name
+            subsample = filtered.sample(
+                n=n_counts,
+                frac=frac,
+                replace=replace,
+                random_state=self.uniform_subsample.random_state,
+            )
+
+            # Append the subsample to the collection dataframe
+            subsampled_dfs.append(subsample)
+
+        subsampled_df = pd.concat(subsampled_dfs)
+
+        log.info(f"Uniformly subsampled dataframe has {len(subsampled_df)} rows.")
+
+        return subsampled_df
+
     def sort_cutouts(self):
         df = self.read_cutouts()
+        # Filtering
         df = self.filter_by_species(df)
         df = self.filter_by_green_sum(df)
         df = self.filter_by_area(df)
         df = self.filter_by_properties(df)
+        # Subsampling
+        df = self.create_uniform_subsample(df)
+        df = self.create_subsample_by_species(df)
 
         if len(df) == 0:
             log.error("No cutouts. Exiting.")

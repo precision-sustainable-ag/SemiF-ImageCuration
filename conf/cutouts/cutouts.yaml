@@ -51,4 +51,24 @@ area: # mean, 25, 50, 75 for choosing greater than 25%, 50% , 75% percentiles
   max: 
   min: 25
 
+uniform_subsample:
+  status: False
+  replace: False 
+  random_state: 42
+  n_counts: 10
+  frac: # Float 0-1
+  
+subsample_by_species:
+  status: False
+  replace: False
+  random_state: 42
+  species_counts:
+    AMPA: 5
+    GLMA4: 10
+    SEPU8: 10
+    SEFA: 10
+    ZEA: 10
+    # Add more species as necessary
+
+
 save_csv: True # to create and save a csv of all cutout metadata
